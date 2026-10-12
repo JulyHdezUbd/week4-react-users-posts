@@ -1,0 +1,11 @@
+# Deploy en Netlify (si la raíz del repo es esta carpeta del proyecto:
+# Build command = npm run build, Publish directory = dist).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA: todas las rutas sirven index.html (necesario para /login, /contacts, etc.)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
